@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funredeactg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">-->
+    <link rel="Website Icon" type="png" href="img/LOGO BORDE.png"> <!--ICONO DE LA PAGINA-->
+</head>
+<body>
+    <header class="cabecera">
+        <div class="cabecera__contenedor">
+            <div class="cabecera_marca">
+                <a href="index.html">
+                    <img class="logo" src="img//LOGO BORDE.png" alt="Logo Funredeactg">
+                </a>
+                <h2 class="name">RETOÑOS DE AMOR</h2>
+            </div>
+            <nav class="navegacion">
+                <ul class="navegacion__lista">
+                    <li class="navegacion__item"><a class="navegacion__link" href="#" data-page="inicio">Inicio</a></li>
+                    <li class="navegacion__item"><a class="navegacion__link" href="#" data-page="nosotros">Nosotros</a></li>
+                    <li class="navegacion__item"><a class="navegacion__link" href="#" data-page="apoyanos">Apóyanos</a></li>
+                </ul>
+            </nav>
+            <div class="idioma-switch">
+                <input type="checkbox" id="toggleIdioma">
+                <label for="toggleIdioma" class="switch">
+                    <span class="bandera bandera-es"></span> <!-- Español a la izquierda -->
+                    <span class="bandera bandera-en"></span> <!-- Inglés a la derecha -->
+                </label>
+            </div>                                                                
+            <div class="apoyanos">
+                <button class="btn__apoyanos" data-page="btn__apoyanos">APOYANOS</button>
+            </div>
+        </div>
+    </header>
+    <main id="contenido">
+        <!-- Aquí se cargarán dinámicamente las secciones -->
+    </main>
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <div class="footer__seccion">
+                <h3 data-page="quienesSomosTitulo">¿Quiénes Somos?</h3>
+                <p data-page="quienesSomosTexto">Somos una fundación sin ánimo de lucro, enfocada en niños y niñas expuestos a flagelos sociales que los hace vulnerables. A través de planes de acción individualizados, buscamos que identifiquen y desarrollen su potencial, descubriendo alternativas para su futuro y el de su entorno.</p>
+            </div>
+    
+            <div class="footer__seccion">
+                <h3 class="footer__titulo--centro" data-page="nuestrasRedes">Nuestras Redes</h3>
+                <div class="footer__redes">
+                    <a href="https://www.facebook.com/funredeactg?mibextid=ZbWKwL" target="_blank" class="footer__icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/funredeactg" target="_blank" class="footer__icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>            
+    
+            <div class="footer__seccion">
+                <h3 data-page="contactenos">Contáctenos</h3>
+                <p><strong data-page="direccion">Dirección:</strong> Vda. Tiquiza Sector 4 esquinas callejón cerámicas</p>
+                <p><strong data-page="celular">Cel.:</strong> +57 315 2804912</p>
+                <p><strong data-page="email">Email:</strong> <a class="link__contacto" href="mailto:info@fundacionesser.org">info@fundacionesser.org</a></p>
+                <p><strong data-page="web">Web:</strong> <a class="link__contacto" href="https://www.Funredeactg.com" target="_blank">www.Funredeactg.com</a></p>
+            </div>
+        </div>
+    
+        <div class="footer__linea"></div>
+    
+        <div class="footer__derechos" data-page="derechos">
+            © 2025 Funredeactg.com. Todos los derechos reservados.
+        </div>
+    </footer>    
+    
+    <script src="script.js"></script>
+    <script src="js/inicio.js"></script>
+    <script src="js/nosotros.js"></script>
+    <script src="js/apoyanos.js"></script>
+</body>
+</html>

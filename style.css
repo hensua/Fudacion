@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+:root {
+    --color-primario: #4dac76;
+    --color-secundario: #fc5969;
+    --color-texto: #fff;
+    --fuente-principal: 'Montserrat', sans-serif;
+}
+/* ✅ Estilos por defecto (PC - Escritorio) */
+*{
+    font-family: var(--fuente-principal);
+}
+body {
+    background-color: #ffffff;
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+header{
+    user-select: none; /* Evita la selección de texto */
+    -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari) */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer/Edge */
+}
+.cabecera {
+    font-size: 14px;
+    background-color: var(--color-primario);
+    width: 100%;
+    height: 70px;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    position: relative; /* Importante para centrar la navegación */
+}
+.cabecera__contenedor {
+    /*background-color: #ac804d;*/
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Separa los elementos */
+    align-items: center;
+    position: relative; /* Necesario para centrar la navegación */
+}
+.cabecera_marca{
+    /*background-color: rgb(216, 154, 73);*/
+
+    display: flex;
+    align-items: center;
+    width: 340px;
+    margin-left: 30px;
+}
+.logo {
+    width: 60px;
+    height: auto; /* Mantiene la proporción */
+    object-fit: contain; /* Evita que se estire */
+    cursor: pointer;
+}
+.name{
+    margin-left: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.navegacion {
+    /*background-color: rgb(255, 123, 0);*/
+
+    width: 400px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navegacion__lista{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    /*background-color: sandybrown;*/
+}
+.navegacion__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* 🔴 Apagado por defecto */
+.navegacion__link.activo {
+    background-color: var(--color-secundario);
+    color: #ffffff !important;
+}
+
+/* 🟢 Hover solo si no está activo */
+.navegacion__link:hover:not(.activo) {
+    color: var(--color-secundario);
+    background-color: rgb(255, 255, 255);
+}
+
+/* Contenedor del interruptor */
+.idioma-switch {
+    position: absolute;
+    right: 240px; /* Ajusta este valor para acercarlo o alejarlo del borde */
+    top: 50%;
+    transform: translateY(-50%); /* Centrado verticalmente */
+    width: 55px;
+    height: 28px;
+}
+
+/* Ocultamos el checkbox */
+#toggleIdioma {
+    display: none;
+}
+
+/* Estilo del interruptor */
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 50px;
+    padding: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Bandera (siempre presentes) */
+.switch .bandera {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Bandera Español (izquierda) */
+.switch .bandera-es {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png');
+    opacity: 1; /* Por defecto español activo */
+}
+
+/* Bandera Inglés (derecha) */
+.switch .bandera-en {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png');
+    opacity: 0.4; /* Opacidad baja cuando no está activa */
+}
+
+/* Cambio de color y alternancia de opacidad */
+#toggleIdioma:checked + .switch {
+    background: rgb(236, 236, 236); /* Color activado */
+}
+
+#toggleIdioma:checked + .switch .bandera-es {
+    opacity: 0.4; /* Apaga español */
+}
+
+#toggleIdioma:checked + .switch .bandera-en {
+    opacity: 1; /* Activa inglés */
+}
+
+
+.apoyanos{
+    margin-right: 40px;
+    /*background-color: chocolate;*/
+}
+.btn__apoyanos {
+    background-color: #fff;
+    color: var(--color-secundario);
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.1s ease, color 0.1s ease, padding-right 0.1s ease; /* Más lento y fluido */
+}
+
+.btn__apoyanos::after {
+    content: "🤍"; /* Ícono de corazón */
+    font-size: 1.1em;
+    color: white; /* Corazón blanco */
+    opacity: 0; /* Inicialmente oculto */
+    transform: scale(0.5); /* Pequeño */
+    margin-left: 0px; /* Sin espacio al inicio */
+    width: 0; /* No ocupa espacio */
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, width 0.5s ease, margin-left 0.5s ease;
+}
+
+.btn__apoyanos:hover {
+    background-color: #fc5969;
+    color: #fff;
+    padding-right: 20px; /* Expande el botón más suavemente */
+}
+
+.btn__apoyanos:hover::after {
+    opacity: 1; /* Se hace visible */
+    transform: scale(1); /* Tamaño normal */
+    width: auto; /* Ocupa espacio solo cuando aparece */
+    margin-left: 10px; /* Espacio suave */
+}
+
+
+main{
+    text-align: center;
+    margin-top: 20px;
+    height: 500px;
+}
+body{
+    background-color: #ffffff;
+}
+
+
+.footer {
+    background-color: #222; 
+    color: white;
+    text-align: center;
+    padding: 60px 20px 30px; /* Se reduce el padding inferior para acomodar la nueva sección */
+}
+
+.footer__contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer__seccion {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer__seccion h3 {
+    color: var(--color-primario);
+    font-size: 31px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.footer__titulo--centro {
+    text-align: center !important;
+}
+
+.footer__seccion p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.footer__seccion strong{
+    font-size: 15px;
+}
+
+/* Estilo de los íconos de redes */
+.footer__redes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer__icon {
+    width: 40px;
+    height: 40px;
+    background-color: white; /* Fondo blanco */
+    color: #222; /* Color de los íconos */
+    border-radius: 50%; /* Hace el fondo circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.footer__icon:hover {
+    background-color: var(--color-secundario); /* Cambia el fondo en hover */
+    color: white;
+}
+
+.link__contacto{
+    color: white;
+    text-decoration: none;
+}
+.link__contacto:hover{
+    color: var(--color-secundario);
+}
+
+/* Línea separadora */
+.footer__linea {
+    width: 100%;
+    height: 2px;
+    background-color: #4CAF50; /* Verde */
+    margin: 20px 0;
+}
+
+/* Derechos de autor */
+.footer__derechos {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+/* Responsivo */
+/*@media (max-width: 768px) {
+    .footer__contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+*/
+
+
+
+/* ✅ Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    
+}
+
+/* ✅ Teléfonos (menos de 768px) */
+@media (max-width: 768px) {
+    .navegacion{
+        opacity: 0;
+    }
+    .name{
+        opacity: 0;
+    }
+    .logo{
+        width:60px;
+    }
+    .btn__apoyanos{
+        font-size: 1em;
+    font-weight: bold;
+    padding: 12px 15px;
+    }
+}
+
