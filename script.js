@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const enlaces = document.querySelectorAll(".navegacion__link");
     const contenido = document.getElementById("contenido");
-
+    const toggleIdioma = document.getElementById("toggleIdioma");
+    
     function cargarSeccion(seccion) {
         fetch(`html/${seccion}.html`) // Carga el HTML externo
             .then(respuesta => respuesta.text())
@@ -47,14 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
         es: {
             inicio: "Inicio",
             nosotros: "Nosotros",
+            talleres: "Talleres",
             apoyanos: "Apóyanos",
             btn__apoyanos: "APÓYANOS",
             quienesSomosTitulo: "¿Quiénes Somos?",
-            quienesSomosTexto: "Somos una fundación sin ánimo de lucro, enfocada en niños y niñas expuestos a flagelos sociales que los hace vulnerables. A través de planes de acción individualizados, buscamos que identifiquen y desarrollen su potencial, descubriendo alternativas para su futuro y el de su entorno.",
+            quienesSomosTexto: "Somos una organización sin ánimo de lucro comprometida con el apoyo integral para mejorar y fortalecer la calidad de vida de niños, niñas, adolescentes, jóvenes y mujeres en situación de vulnerabilidad en la ciudad de Cartagena.",
             nuestrasRedes: "Nuestras Redes",
             contactenos: "Contáctenos",
             direccion: "Dirección:",
-            celular: "Cel.:",
+            celular: "Cel:",
             email: "Email:",
             web: "Web:",
             derechos: "© 2025 Funredeactg.com. Todos los derechos reservados."
@@ -62,10 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
         en: {
             inicio: "Home",
             nosotros: "About Us",
+            talleres: "Workshops",
             apoyanos: "Support Us",
             btn__apoyanos: "SUPPORT US",
             quienesSomosTitulo: "Who We Are?",
-            quienesSomosTexto: "We are a non-profit foundation focused on children exposed to social scourges that make them vulnerable. Through individualized action plans, we aim to help them identify and develop their potential, discovering alternatives for their future and their environment.",
+            quienesSomosTexto: "We are a non-profit organization committed to providing comprehensive support to improve and strengthen the quality of life of children, adolescents, young people, and women in vulnerable situations in the city of Cartagena.",
             nuestrasRedes: "Our Social Media",
             contactenos: "Contact Us",
             direccion: "Address:",
@@ -95,18 +98,13 @@ document.addEventListener("DOMContentLoaded", function () {
         traducirContenido(idioma);
     }
 
+    // Mantener el estado del toggle de idioma al cargar la página
+    toggleIdioma.checked = (idiomaGuardado === "en");
+    cambiarIdioma(idiomaGuardado);
+
     // Detectar cambio en el interruptor de idioma
-    document.getElementById("toggleIdioma").addEventListener("change", function () {
+    toggleIdioma.addEventListener("change", function () {
         const idiomaSeleccionado = this.checked ? "en" : "es";
         cambiarIdioma(idiomaSeleccionado);
     });
-
-    // Mantener el idioma guardado al cargar la página
-    document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("toggleIdioma").checked = (idiomaGuardado === "en");
-        cambiarIdioma(idiomaGuardado);
-    });
-
-    // Aplicar traducción inicial a la sección cargada
-    traducirContenido(idiomaGuardado);
 });

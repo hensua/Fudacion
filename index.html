@@ -23,16 +23,19 @@
                 <ul class="navegacion__lista">
                     <li class="navegacion__item"><a class="navegacion__link" href="#" data-page="inicio">Inicio</a></li>
                     <li class="navegacion__item"><a class="navegacion__link" href="#" data-page="nosotros">Nosotros</a></li>
+                    <li class="navegacion__item"><a class="navegacion__link" href="#" data-page="talleres">Talleres</a></li>
                     <li class="navegacion__item"><a class="navegacion__link" href="#" data-page="apoyanos">Apóyanos</a></li>
                 </ul>
             </nav>
-            <div class="idioma-switch">
-                <input type="checkbox" id="toggleIdioma">
-                <label for="toggleIdioma" class="switch">
-                    <span class="bandera bandera-es"></span> <!-- Español a la izquierda -->
-                    <span class="bandera bandera-en"></span> <!-- Inglés a la derecha -->
-                </label>
-            </div>                                                                
+            <div class="switch__contenedor">
+                <div class="idioma-switch">
+                    <input type="checkbox" id="toggleIdioma">
+                    <label for="toggleIdioma" class="switch">
+                        <span class="bandera bandera-es"></span> <!-- Español a la izquierda -->
+                        <span class="bandera bandera-en"></span> <!-- Inglés a la derecha -->
+                    </label>
+                </div> 
+            </div>                                                               
             <div class="apoyanos">
                 <button class="btn__apoyanos" data-page="btn__apoyanos">APOYANOS</button>
             </div>
@@ -45,7 +48,7 @@
         <div class="footer__contenedor">
             <div class="footer__seccion">
                 <h3 data-page="quienesSomosTitulo">¿Quiénes Somos?</h3>
-                <p data-page="quienesSomosTexto">Somos una fundación sin ánimo de lucro, enfocada en niños y niñas expuestos a flagelos sociales que los hace vulnerables. A través de planes de acción individualizados, buscamos que identifiquen y desarrollen su potencial, descubriendo alternativas para su futuro y el de su entorno.</p>
+                <p data-page="quienesSomosTexto">Somos una organización sin ánimo de lucro comprometida con el apoyo integral para mejorar y fortalecer la calidad de vida de niños, niñas, adolescentes, jóvenes y mujeres en situación de vulnerabilidad en la ciudad de Cartagena.</p>
             </div>
     
             <div class="footer__seccion">
@@ -57,14 +60,17 @@
                     <a href="https://www.instagram.com/funredeactg" target="_blank" class="footer__icon">
                         <i class="fab fa-instagram"></i>
                     </a>
+                    <a href="https://wa.me/573004721351" target="_blank" class="footer__icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
-            </div>            
+            </div>           
     
             <div class="footer__seccion">
                 <h3 data-page="contactenos">Contáctenos</h3>
-                <p><strong data-page="direccion">Dirección:</strong> Vda. Tiquiza Sector 4 esquinas callejón cerámicas</p>
-                <p><strong data-page="celular">Cel.:</strong> +57 315 2804912</p>
-                <p><strong data-page="email">Email:</strong> <a class="link__contacto" href="mailto:info@fundacionesser.org">info@fundacionesser.org</a></p>
+                <p><strong data-page="direccion">Dirección:</strong> Paraíso II sector los desplazados</p>
+                <p><strong data-page="celular">Cel:</strong> +57 3004721351</p>
+                <p><strong data-page="email">Email:</strong> <a class="link__contacto" href="https://mail.google.com/mail/?view=cm&fs=1&to=redeactg@gmail.com" target="_blank">redeactg@gmail.com</a></p>                                            
                 <p><strong data-page="web">Web:</strong> <a class="link__contacto" href="https://www.Funredeactg.com" target="_blank">www.Funredeactg.com</a></p>
             </div>
         </div>
@@ -79,6 +85,7 @@
     <script src="script.js"></script>
     <script src="js/inicio.js"></script>
     <script src="js/nosotros.js"></script>
+    <script src="js/talleres.js"></script>
     <script src="js/apoyanos.js"></script>
 </body>
 </html>
