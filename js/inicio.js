@@ -10,20 +10,12 @@ const traduccionesInicio = {
     es: {
         bienvenida: "Bienvenido a nuestra Fundación",
         descripcion: "Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.",
-        masInfo: "Más Información",
-        misionTitulo: "Nuestra Misión",
-        misionTexto: "Proporcionar apoyo integral a niños y niñas para garantizar su bienestar y desarrollo.",
-        visionTitulo: "Nuestra Visión",
-        visionTexto: "Ser una organización líder en la protección infantil y educación social."
+        masInfo: "Más Información"
     },
     en: {
         bienvenida: "Welcome to our Foundation",
         descripcion: "We work to provide a better future for children in vulnerable situations.",
-        masInfo: "More Information",
-        misionTitulo: "Our Mission",
-        misionTexto: "To provide comprehensive support for children to ensure their well-being and development.",
-        visionTitulo: "Our Vision",
-        visionTexto: "To be a leading organization in child protection and social education."
+        masInfo: "More Information"
     }
 };
 

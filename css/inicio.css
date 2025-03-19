@@ -1,0 +1,97 @@
+/*main{
+    text-align: center;
+}*/
+/*.portada__imagen{
+    color: white;
+    text-align: center;
+    background-color: blueviolet;
+    width: 100%;
+    height: 500px;
+}*/
+
+.portada__contenedor {
+    position: relative;
+    width: 100%;
+    height: 700px; 
+    overflow: hidden;
+}
+
+/* Fondo base */
+.portada__fondo-base {
+    background-color: #a4ff92;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Recurso SVG */
+.portada__recurso img {
+    position: absolute;
+    top: 20px;
+    left: 460px;
+    max-width: 1400px;
+    width: 80%; /* para que también sea responsive */
+    height: auto;
+    z-index: 2;
+}
+
+/* Imagen niños */
+.portada__imagen-niños img {
+    position: absolute;
+    bottom: 0;
+    right: 190px;
+    height: 80%;
+    max-width: 500px;
+    width: 100%;
+    z-index: 3;
+    object-fit: contain;
+}
+
+/* Contenido texto */
+.portada__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    transform: translateY(-50%);
+    z-index: 4;
+    color: #4dac76;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.portada__contenido h1 {
+    max-width: 600px;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+/* Pantallas medianas (laptops pequeñas/tablets) */
+@media (max-width: 1024px) {
+    .portada__imagen-niños img {
+        right: 100px;
+        height: 60%;
+    }
+
+    .portada__contenido {
+        left: 150px;
+    }
+
+    .portada__contenido h1 {
+        font-size: 2.5rem;
+    }
+
+    .portada__recurso img {
+        left: 300px;
+        width: 70%;
+    }
+}
