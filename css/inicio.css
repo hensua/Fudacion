@@ -73,6 +73,125 @@
     font-weight: 900;
 }
 
+.valores__contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.valores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    width: 1000px;
+}
+
+.title__valores {
+    width: 100%;         /* Ocupa todo el ancho */
+    text-align: center;  /* Centra el texto */
+    font-size: 2rem;     /* Tamaño del texto, ajustable */
+    font-weight: bold;   /* Negrita */
+    margin-bottom: 30px; /* Espacio debajo para separar de las tarjetas */
+    color: #333;         /* Color del texto */
+}
+.valor-tarjeta {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.valor-nombre {
+    position: absolute;
+    top: -25px;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.valor-contenido {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Colores personalizados */
+.amor {
+    border: 6px solid #ff4d6d;
+}
+
+.amor .valor-nombre {
+    color: #ff4d6d;
+}
+
+.fe {
+    border: 6px solid #6c63ff;
+}
+
+.fe .valor-nombre {
+    color: #6c63ff;
+}
+
+.respeto {
+    border: 6px solid #00c897;
+}
+
+.respeto .valor-nombre {
+    color: #00c897;
+}
+
+.tolerancia {
+    border: 6px solid #ffa500;
+}
+
+.tolerancia .valor-nombre {
+    color: #ffa500;
+}
+
+.responsabilidad {
+    border: 6px solid #ff6f61;
+}
+
+.responsabilidad .valor-nombre {
+    color: #ff6f61;
+}
+
+.solidaridad {
+    border: 6px solid #4dac76;
+}
+
+.solidaridad .valor-nombre {
+    color: #4dac76;
+}
+
+.companerismo {
+    border: 6px solid #1e90ff;
+}
+
+.companerismo .valor-nombre {
+    color: #1e90ff;
+}
+
+.honestidad {
+    border: 6px solid #8e44ad;
+}
+
+.honestidad .valor-nombre {
+    color: #8e44ad;
+}
+
 /* ----- MEDIA QUERIES ----- */
 
 /* Pantallas medianas (laptops pequeñas/tablets) */
