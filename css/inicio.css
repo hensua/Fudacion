@@ -327,16 +327,16 @@
         margin: 18px;
     }
     .outer-container {
-        width: 110px;
+        width: 130px;
         border-radius: 30px;
         border: 6px solid #4CAF50;
     }
     .inner-container {
         border-radius: 15px;
-        height: 70px;
+        height: 60px;
     }
     .number-circle {
-        top: -32px;
+        top: -30px;
         width: 40px;
         height: 40px;
         font-size: 20px;
@@ -348,14 +348,14 @@
         margin: 0px auto;
     }
     .valor-contenido {
-        font-size: 10px;
+        font-size: 12px;
         margin: 6px 0;
     }
     .icon{
         display: flex;
         justify-content: center;
         align-items: center;
-        scale: 0.6;
+        scale: 0.7;
         width: 30px;
         height: 30px;
         margin: auto;
