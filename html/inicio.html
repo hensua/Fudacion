@@ -1,103 +1,212 @@
-<link rel="stylesheet" href="css/inicio.css">
-<main>
-    <!--<section class="portada__contenedor">
-        <div class="portada__imagen">
-            <img src="../img/recurso_Fondo.svg" alt="Portada">
-        </div>
-    </section>-->
-
-    <section class="portada__contenedor">
-        <!-- Fondo base -->
-        <div class="portada__fondo-base"></div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+    <main>
+        <section class="portada__contenedor">
+            <!-- Fondo base -->
+            <div class="portada__fondo-base"></div>
+        
+            <!-- Recurso SVG del fondo -->
+            <div class="portada__recurso">
+                <img src="img/recurso_Fondo.svg" alt="Fondo decorativo">
+            </div>
     
-        <!-- Recurso SVG del fondo -->
-        <div class="portada__recurso">
-            <img src="img/recurso_Fondo.svg" alt="Fondo decorativo">
-        </div>
-
-        <!-- Imagen de los niños -->
-        <div class="portada__imagen-niños">
-            <img src="img/niñosPrueba.png" alt="Niños felices">
-        </div>
+            <!-- Imagen de los niños -->
+            <div class="portada__imagen-niños">
+                <img src="img/niñosPrueba.png" alt="Niños felices">
+            </div>
+        
+            <!-- Contenido textual -->
+            <div class="portada__contenido">
+                <h1>¡TRANSFORMAMOS VIDAS CON AMOR!</h1>
+                <button class="btn__apoyanos" data-page="btn__apoyanos">APOYANOS</button>
+            </div>
+        </section>
     
-        <!-- Contenido textual -->
-        <div class="portada__contenido">
-            <h1>¡TRANSFORMAMOS VIDAS CON AMOR!</h1>
-            <button class="btn__apoyanos" data-page="btn__apoyanos">APOYANOS</button>
-        </div>
-    </section>
-
-    <section class="valores__contenedor">
-        <div class="valores">
+        <section class="valores__contenedor">
             <h1 class="title__valores">NUESTROS VALORES</h1>
-            <div class="valor-tarjeta amor">
-                <div class="valor-nombre">1</div>
-                <div class="valor-contenido">Amor</div>
+            <div class="valores">
+                <div class="valor-tarjeta amor">
+                    <div class="outer-container">
+                        <div class="number-circle">01</div>
+                        <div class="inner-container">
+                            <div class="divider"></div>
+                            <div class="valor-contenido">Amor</div>
+                            <div class="divider"></div>
+                            <div class="icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 21s-6-4.35-9-8.5C1.5 8.5 4 4.5 8 4.5c2 0 3.5 1.5 4 2 0.5-0.5 2-2 4-2 4 0 6.5 4 5 8-3 4.15-9 8.5-9 8.5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="valor-tarjeta fe">
+                    <div class="outer-container">
+                        <div class="number-circle">02</div>
+                        <div class="inner-container">
+                            <div class="divider"></div>
+                            <div class="valor-contenido">Fe</div>
+                            <div class="divider"></div>
+                            <div class="icon">
+                                <!-- Icono SVG -->
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2V22M5 12H19" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="valor-tarjeta respeto">
+                    <div class="outer-container">
+                        <div class="number-circle">03</div>
+                        <div class="inner-container">
+                            <div class="divider"></div>
+                            <div class="valor-contenido">Respeto</div>
+                            <div class="divider"></div>
+                            <div class="icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path d="M2 12C3.5 7 8 4 12 4C16 4 20.5 7 22 12C20.5 17 16 20 12 20C8 20 3.5 17 2 12Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="valor-tarjeta tolerancia">
+                    <div class="outer-container">
+                        <div class="number-circle">04</div>
+                        <div class="inner-container">
+                            <div class="divider"></div>
+                            <div class="valor-contenido">Tolerancia</div>
+                            <div class="divider"></div>
+                            <div class="icon">
+                                <!-- Icono SVG -->
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <circle cx="8" cy="10" r="1" />
+                                    <circle cx="16" cy="10" r="1" />
+                                    <path d="M8 14C9 16 15 16 16 14" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="valor-tarjeta responsabilidad">
+                    <div class="outer-container">
+                        <div class="number-circle">05</div>
+                        <div class="inner-container">
+                            <div class="divider"></div>
+                            <div class="valor-contenido">Responsabilidad</div>
+                            <div class="divider"></div>
+                            <div class="icon">
+                                <!-- Icono SVG -->
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 6H21M3 12H21M3 18H12M16 16L19 19L23 14" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="valor-tarjeta solidaridad">
+                    <div class="outer-container">
+                        <div class="number-circle">06</div>
+                        <div class="inner-container">
+                            <div class="divider"></div>
+                            <div class="valor-contenido">Solidaridad</div>
+                            <div class="divider"></div>
+                            <div class="icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path d="M2 12C3.5 7 8 4 12 4C16 4 20.5 7 22 12C20.5 17 16 20 12 20C8 20 3.5 17 2 12Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="valor-tarjeta compañerismo">
+                    <div class="outer-container">
+                        <div class="number-circle">07</div>
+                        <div class="inner-container">
+                            <div class="divider"></div>
+                            <div class="valor-contenido">Compañerismo</div>
+                            <div class="divider"></div>
+                            <div class="icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path d="M2 12C3.5 7 8 4 12 4C16 4 20.5 7 22 12C20.5 17 16 20 12 20C8 20 3.5 17 2 12Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="valor-tarjeta honestidad">
+                    <div class="outer-container">
+                        <div class="number-circle">08</div>
+                        <div class="inner-container">
+                            <div class="divider"></div>
+                            <div class="valor-contenido">Honestidad</div>
+                            <div class="divider"></div>
+                            <div class="icon">
+                                <!-- Icono SVG -->
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path d="M2 12C3.5 7 8 4 12 4C16 4 20.5 7 22 12C20.5 17 16 20 12 20C8 20 3.5 17 2 12Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    
+    
+    
+    
             </div>
-
-            <div class="valor-tarjeta fe">
-                <div class="valor-nombre">2</div>
-                <div class="valor-contenido">Fe</div>
-            </div>
-
-            <div class="valor-tarjeta respeto">
-                <div class="valor-nombre">3</div>
-                <div class="valor-contenido">Respeto</div>
-            </div>
-
-            <div class="valor-tarjeta tolerancia">
-                <div class="valor-nombre">4</div>
-                <div class="valor-contenido">Tolerancia</div>
-            </div>
-
-            <div class="valor-tarjeta responsabilidad">
-                <div class="valor-nombre">5</div>
-                <div class="valor-contenido">Responsabilidad</div>
-            </div>
-
-            <div class="valor-tarjeta solidaridad">
-                <div class="valor-nombre">6</div>
-                <div class="valor-contenido">Solidaridad</div>
-            </div>
-
-            <div class="valor-tarjeta companerismo">
-                <div class="valor-nombre">7</div>
-                <div class="valor-contenido">Compañerismo</div>
-            </div>
-
-            <div class="valor-tarjeta honestidad">
-                <div class="valor-nombre">8</div>
-                <div class="valor-contenido">Honestidad</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bienestarIntegral__contenedor">
-        <h1 data-page="bienestarIntegral">BIENESTAR INTEGRAL</h1>
-        <p data-page="descripcion">
-            Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.
-        </p>
-    </section>
-
-    <section class="impactoSocial__contenedor">
-        <h1 data-page="impactoSocial">IMPACTO SOCIAL</h1>
-        <p data-page="descripcion">
-            Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.
-        </p>
-    </section>
-
-    <section class="quieresApoyarnos__contenedor">
-        <h1 data-page="quieresApoyarnos">¿Quieres Apoyarnos?</h1>
-        <p data-page="descripcion">
-            Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.
-        </p>
-    </section>
-
-    <!--<section>
-        <h1 data-page="n">LOL</h1>
-        <p data-page="descripcion">
-            Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.
-        </p>
-        <button class="btn" data-page="masInfo">Más Información</button>
-    </section>-->
-</main>
+        </section>
+    
+    
+        <section class="bienestarIntegral__contenedor">
+            <h1 data-page="bienestarIntegral">BIENESTAR INTEGRAL</h1>
+            <p data-page="descripcion">
+                Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.
+            </p>
+        </section>
+    
+        <section class="impactoSocial__contenedor">
+            <h1 data-page="impactoSocial">IMPACTO SOCIAL</h1>
+            <p data-page="descripcion">
+                Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.
+            </p>
+        </section>
+    
+        <section class="quieresApoyarnos__contenedor">
+            <h1 data-page="quieresApoyarnos">¿Quieres Apoyarnos?</h1>
+            <p data-page="descripcion">
+                Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.
+            </p>
+        </section>
+    
+        <!--<section>
+            <h1 data-page="n">LOL</h1>
+            <p data-page="descripcion">
+                Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.
+            </p>
+            <button class="btn" data-page="masInfo">Más Información</button>
+        </section>-->
+    </main>
+</body>
+</html>
