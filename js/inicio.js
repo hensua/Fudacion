@@ -9,7 +9,7 @@
 const traduccionesInicio = {
     es: {
         bienvenida: "Bienvenido a nuestra Fundación",
-        descripcion: "Trabajamos para brindar un mejor futuro a los niños y niñas en situación de vulnerabilidad.",
+        descripcion: "En la fundación Retoños de Amor buscamos contribuir al desarrollo y bienestar integral de nuestros niños y sus familias, desde los sectores que consideramos son indispensables para una vida digna y un desarrollo personal adecuado.",
         masInfo: "Más Información"
     },
     en: {

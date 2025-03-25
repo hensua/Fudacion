@@ -18,7 +18,7 @@
 
 /* Fondo base */
 .portada__fondo-base {
-    background-color: #a4ff92;
+    background-color: #ffebed;
     position: absolute;
     top: 0;
     left: 0;
@@ -287,6 +287,135 @@
     stroke: #8e44ad;
 }
 
+
+.bienestarIntegral__contenedor{
+    width: 100%;
+    margin-top: 80px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 255, 231);
+}
+.contenedor__tittleIntegral {
+    width: 800px;
+    /*background-color: blueviolet;*/
+}
+.tittle__integral {
+    color: #4dac76;
+    width: 200px;
+    margin-top: 0;
+    /*background-color: #ffa500;*/
+}
+.barra__integral {
+    width: 200px;
+    height: 14px;
+    margin-left: 300px;
+    margin-top: -20px;
+    margin-bottom: -10px;
+    background-color: #4dac76;
+}
+.descripcion__integral {
+    width: 80%;
+    margin-left: 100px;
+    /*background-color: #ff4d6d;*/
+}
+
+
+
+
+
+
+
+.contendor__contenidoIntegral {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #d4d2fc;*/
+}
+.img__contenidoIntegral {
+    width: 150px;
+    height: 150px;
+    /*background-color: bisque;*/
+}
+.tittle__contenidoIntegral {
+    font-weight: bold;
+}
+.descripcion__contenidoIntegral {
+    width: 300px;
+    margin-top: -15px;
+}
+.Barra__contenidoIntegral {
+    width: 200px;
+    height: 14px;
+    margin-top: -10px;
+    background-color: #fc5969;
+}
+
+.cognitivo__contenidoIntegral {
+    display: flex;
+    /*background-color: #ffa500;*/
+    margin-top: 40px;
+    margin-right: 300px;
+}
+.contenido__cognitivo {
+    margin-left: 20px;
+}
+
+
+.psicologico__contenidoIntegral {
+    display: flex;
+    margin-left: 300px;
+    margin-top: 40px;
+}
+.contenido__psicologico {
+    margin-left: 20px;
+}
+.psicologico__contenidoIntegral .Barra__contenidoIntegral {
+    background-color: #4dac76;
+}
+
+.nutricional__contenidoIntegral {
+    display: flex;
+    margin-right: 300px;
+    margin-top: 40px;
+}
+.contenido__nutricional {
+    margin-left: 20px;
+}
+.nutricional__contenidoIntegral .Barra__contenidoIntegral {
+    background-color: #fc5969;
+}
+
+.formacion__contenidoIntegral {
+    display: flex;
+    margin-left: 300px;
+    margin-top: 40px;
+}
+.contenido__formacion {
+    margin-left: 20px;
+}
+.formacion__contenidoIntegral .Barra__contenidoIntegral {
+    background-color: #4dac76;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----- MEDIA QUERIES ----- */
 
 /* Pantallas medianas (laptops pequeñas/tablets) */
@@ -334,6 +463,7 @@
     .inner-container {
         border-radius: 15px;
         height: 60px;
+        padding: 35px 0px 20px;
     }
     .number-circle {
         top: -30px;
