@@ -304,7 +304,7 @@
 }
 .tittle__integral {
     color: #4dac76;
-    width: 200px;
+    width: 300px;
     margin-top: 0;
     /*background-color: #ffa500;*/
 }
@@ -404,7 +404,19 @@
 
 
 
-
+.impactoSocial__contenedor{
+    background-color: #c8c6fd;
+}
+.contenido__impactoSocial {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.impactoSocial__apartado{
+    width: 25%;
+    height: auto;
+    background-color: #4dac76;
+}
 
 
 
