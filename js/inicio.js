@@ -26,9 +26,9 @@ const traduccionesInicio = {
         tittle__bienestar__psicologico: "Psicológico",
         descipcion__bienestar__psicologico: "Brindamos espacios abiertos (individuales y grupales) que permiten el abordaje de situaciones cotidianas a nivel familiar y comunitario.",
         tittle__bienestar__nuticional: "Nutricional",
-        descipcion__bienestar__nuticional: "Contamos con un programa de alimentación balanceada que garantiza la nutrición adecuada de los niños y niñas de la fundación.",
+        descipcion__bienestar__nuticional: "Proporcionamos una ración de comida saludable a la semana (desayuno o almuerzo) para contribuir a la reducción del índice de hambre en la ciudad de Cartagena.",
         tittle__bienestar__formacion: "Formación",
-        descipcion__bienestar__formacion: "Falta",
+        descipcion__bienestar__formacion: "Ofrecemos una variedad de cursos cortos diseñados para identificar y fortalecer habilidades únicas y humanas a través del autodescubrimiento, preparándolos para el mundo laboral.",
     },
     en: {
         tittle__portada: "WE TRANSFORM LIVES WITH LOVE!",
@@ -51,7 +51,7 @@ const traduccionesInicio = {
         tittle__bienestar__nuticional: "Nutritional",
         descipcion__bienestar__nuticional: "We provide a healthy meal ration once a week (breakfast or lunch) to help reduce the hunger rate in the city of Cartagena.",
         tittle__bienestar__formacion: "Training",
-        descipcion__bienestar__formacion: "Falta",
+        descipcion__bienestar__formacion: "We offer a variety of short courses designed to identify and strengthen unique and human skills through self-discovery, preparing them for the job market.",
 
         
     }
