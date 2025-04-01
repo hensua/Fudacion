@@ -290,7 +290,7 @@
 
 .bienestarIntegral__contenedor{
     width: 100%;
-    margin-top: 80px;
+    margin-top: 40px;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -405,7 +405,16 @@
 
 
 .impactoSocial__contenedor{
-    background-color: #c8c6fd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #c8c6fd;*/
+}
+.tittle__impactoSocial{
+    font-weight: bold;
+    color: #fc5969;
+    margin-top: 40px;
 }
 .contenido__impactoSocial {
     display: flex;
@@ -413,16 +422,54 @@
     gap: 10px;
 }
 .impactoSocial__apartado{
-    width: 25%;
-    height: auto;
-    background-color: #4dac76;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    border-radius: 20px;
+    margin-top: 10px;
+    background-color: #fc5969;
+}
+.text__impactoSocial {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 10px;
+}
+.parrafo__impactoSocial {
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    width: 150px;
+    margin-top: 2px;
 }
 
 
 
-
-
-
+.quieresApoyarnos__contenedor{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    /*background-color: #6c63ff;*/
+}
+.quieresApoyarnos__contenido{
+    display: flex;
+    width: 900px;
+    background-color: #ffebed;
+}
+.quieresApoyarnos__img{
+    height: auto;
+    background-color: aquamarine;
+}
+.quieresApoyarnos__textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 20px;
+}
 
 
 
