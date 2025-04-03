@@ -29,6 +29,15 @@ const traduccionesInicio = {
         descipcion__bienestar__nuticional: "Proporcionamos una ración de comida saludable a la semana (desayuno o almuerzo) para contribuir a la reducción del índice de hambre en la ciudad de Cartagena.",
         tittle__bienestar__formacion: "Formación",
         descipcion__bienestar__formacion: "Ofrecemos una variedad de cursos cortos diseñados para identificar y fortalecer habilidades únicas y humanas a través del autodescubrimiento, preparándolos para el mundo laboral.",
+
+        tittle__impactoSocial: "IMPACTO SOCIAL",
+        comida__impactoSocial: "Raciones de comida",
+        impactados__impactoSocial: "Niños impactados",
+        apadrinados__impactoSocial: "Niños apadrinados",
+        cursos__impactoSocial: "Cursos ofertados",
+
+        tittle__quieresApoyarnos: "¿Quiéres Apoyarnos?",
+        parrafo__quieresApoyarnos: "Apoyar nuestra causa es sembrar en tierra fértil. Aporta tu grano de arena y, juntos, podremos crear el futuro que, al igual que todos, estos retoños merecen.",
     },
     en: {
         tittle__portada: "WE TRANSFORM LIVES WITH LOVE!",
@@ -53,7 +62,14 @@ const traduccionesInicio = {
         tittle__bienestar__formacion: "Training",
         descipcion__bienestar__formacion: "We offer a variety of short courses designed to identify and strengthen unique and human skills through self-discovery, preparing them for the job market.",
 
-        
+        tittle__impactoSocial: "SOCIAL IMPACT",
+        comida__impactoSocial: "Food rations",
+        impactados__impactoSocial: "Impacted children",
+        apadrinados__impactoSocial: "Sponsored children",
+        cursos__impactoSocial: "Offered courses",
+
+        tittle__quieresApoyarnos: "Do you want to support us?",
+        parrafo__quieresApoyarnos: "Supporting our cause is like planting in fertile soil. Contribute your grain of sand, and together we can create the future that these seedlings, like everyone else, deserve.",
     }
 };
 
