@@ -165,6 +165,22 @@
     font-size: 16px;
     margin: 10px 0;
 }
+.iconFe{
+    width: 35px;
+    height: 35px;
+}
+.iconRespeto{
+    width: 43px;
+    height: 43px;
+}
+.iconCompañerismo{
+    width: 40px;
+    height: 40px;
+}
+.iconSolidaridad{
+    width: 35px;
+    height: 35px;
+}
 /* Colores específicos (si deseas personalizarlos por valor) */
 .valor-tarjeta.amor .outer-container {
     border-color: #ff4d6d;
