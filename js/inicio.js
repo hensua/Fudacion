@@ -1,10 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", function () {
-    if (document.querySelector("h1").innerText === "Bienvenido a Inicio") {
-        console.log("La sección Inicio ha sido cargada");
-        // Aquí puedes poner cualquier funcionalidad especial para Inicio
-    }
-});*/
-
 // 📌 Diccionario de traducciones para la sección de Inicio
 const traduccionesInicio = {
     es: {
@@ -87,16 +80,63 @@ function traducirInicio(idioma) {
 document.addEventListener("DOMContentLoaded", () => {
     const idiomaGuardado = localStorage.getItem("idioma") || "es";
     traducirInicio(idiomaGuardado);
+    setTimeout(() => iniciarAnimacionNumeros(), 500); // Espera a que el DOM esté listo
 });
 
-// 📌 Detectar cambio de idioma desde el evento global
+// 📌 Detectar cambio de idioma y reiniciar la animación
 document.addEventListener("cambioIdioma", () => {
     const idiomaActual = localStorage.getItem("idioma") || "es";
     traducirInicio(idiomaActual);
+    setTimeout(() => iniciarAnimacionNumeros(), 500);
 });
 
-// 📌 Sincronizar el idioma al cambiar de sección
-window.addEventListener("load", () => {
-    const idiomaActual = localStorage.getItem("idioma") || "es";
-    traducirInicio(idiomaActual);
-});
+// 📌 Función para iniciar la animación de los números al entrar en viewport
+function iniciarAnimacionNumeros() {
+    const elementosNumeros = document.querySelectorAll(".text__impactoSocial");
+
+    if (elementosNumeros.length === 0) return;
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting && !entry.target.dataset.animado) {
+                animarNumero(entry.target);
+                entry.target.dataset.animado = "true"; // Marca como animado
+                observer.unobserve(entry.target); // Deja de observar después de animar
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+    });
+
+    elementosNumeros.forEach((elemento) => observer.observe(elemento));
+}
+
+// 📌 Función para animar cada número y garantizar que llegue al valor final
+function animarNumero(elemento) {
+    const valorFinal = parseInt(elemento.textContent.replace(/\./g, ""), 10);
+    if (isNaN(valorFinal)) return;
+
+    let contador = 0;
+    let duracion = 1000; // Duración total en milisegundos (1s)
+    let pasos = 60; // Frames (60 FPS)
+    let incremento = Math.max(1, Math.ceil(valorFinal / pasos));
+    let tiempoPorPaso = duracion / pasos;
+
+    elemento.textContent = "0";
+
+    const intervalo = setInterval(() => {
+        contador += incremento;
+        if (contador >= valorFinal) {
+            elemento.textContent = valorFinal.toLocaleString("es");
+            clearInterval(intervalo);
+        } else {
+            elemento.textContent = contador.toLocaleString("es");
+        }
+    }, tiempoPorPaso);
+}
+
+// 📌 Iniciar la animación cuando se cargue la página
+window.onload = iniciarAnimacionNumeros;
+
