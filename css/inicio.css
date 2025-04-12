@@ -530,8 +530,11 @@
 
 /* Pantallas medianas (laptops pequeñas/tablets) */
 @media (max-width: 1024px) {
+    .portada__contenedor {
+        background-color: rgb(76, 240, 84);
+    }
     .portada__imagen-niños img {
-        right: 100px;
+        right: auto;
         height: 60%;
     }
 
@@ -544,8 +547,9 @@
     }
 
     .portada__recurso img {
-        left: 300px;
-        width: 70%;
+        left: auto;
+        top: 50px;
+        width: 350px;
     }
 
     .valores {
@@ -555,6 +559,62 @@
 
 /* ✅ Teléfonos (menos de 768px) */
 @media (max-width: 768px) {
+    .portada__contenedor {
+        position: relative;
+        width: 100%;
+        height: 500px; 
+        overflow: hidden;
+    }
+    .portada__fondo-base {
+        background-color: #ffebed;
+        height: 100%;
+    }
+    .portada__imagen-niños img {
+        right: auto;
+        height: 60%;
+    }
+
+    .portada__contenido {
+        position: absolute; /* Necesario para usar top y left */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrado exacto */
+        z-index: 4;
+        color: #4dac76;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        
+        
+    }
+    
+    
+    .portada__contenido h1 {
+        max-width: 260px;
+        font-size: 24px;
+        margin-top: -360px;
+        /*padding: 16px;
+        border-radius: 12px;
+        background-color: #ffffff;*/
+    }
+
+    /*.portada__contenido h1 {
+        font-size: 2.5rem;
+    }*/
+
+    .btn__apoyanos__portada {
+        display: none;
+    }
+
+    .portada__recurso img {
+        left: auto;
+        top: 120px;
+        width: 350px;
+    }
+
+
+
+
     .valores {
         width: 100%;
     }
@@ -563,7 +623,7 @@
         padding: 5px 0 0 0;
     }
     .valor-tarjeta {
-        margin: 18px;
+        margin: 16px 6px;
     }
     .outer-container {
         width: 130px;
@@ -582,7 +642,7 @@
         font-size: 20px;
     }
     .outer-container::after {
-        right: -18px;
+        display: none;
     }
     .divider {
         margin: 0px auto;
