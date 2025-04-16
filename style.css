@@ -356,8 +356,15 @@ body{
     }
     .btn__apoyanos{
         font-size: 1em;
-    font-weight: bold;
-    padding: 12px 15px;
+        font-weight: bold;
+        padding: 12px 15px;
+    }
+
+    .footer__titulo--centro {
+        text-align: left !important;
+    }
+    .footer__redes {
+        justify-content: left;
     }
 }
 
