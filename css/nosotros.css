@@ -1,0 +1,358 @@
+
+
+
+
+
+
+
+/*VALORES SECCION*/
+.valores__contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.valores {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title__valores {
+    font-size: 32px;
+    padding: 30px 0 10px 0;
+    color: #4CAF50;
+}
+
+.valor-tarjeta {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+}
+/* Contenedor exterior con degradado y borde */
+.outer-container {
+    position: relative;
+    width: 180px;
+    background: linear-gradient(-40deg, #d1d1d1, #f1f1f1);
+    border-radius: 40px;
+    border: 12px solid #4CAF50;
+    padding: 8px;
+    margin: 0 auto;
+}
+/* Interior blanco */
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 50px 10px 20px;
+    position: relative;
+    height: 150px;
+    text-align: center;
+}
+/* Círculo con número */
+.number-circle {
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4CAF50;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    border: 6px solid #f1f1f1;
+    z-index: 2;
+}
+.outer-container::after {
+    content: '';
+    position: absolute;
+    right: -28px;
+    top: 35px;
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 18px solid #614caf;
+}
+/* Línea divisoria */
+.divider {
+    width: 20%;
+    height: 2px;
+    background: #cccccc;
+    margin: 10px auto;
+}
+/* Texto dentro */
+.valor-contenido {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.iconFe{
+    width: 35px;
+    height: 35px;
+}
+.iconRespeto{
+    width: 43px;
+    height: 43px;
+}
+.iconCompañerismo{
+    width: 40px;
+    height: 40px;
+}
+.iconSolidaridad{
+    width: 35px;
+    height: 35px;
+}
+/* Colores específicos (si deseas personalizarlos por valor) */
+.valor-tarjeta.amor .outer-container {
+    border-color: #ff4d6d;
+}
+.valor-tarjeta.amor .number-circle {
+    background: #ff4d6d;
+}
+.valor-tarjeta.amor .valor-contenido {
+    color: #ff4d6d;
+}
+.valor-tarjeta.amor .outer-container::after {
+    border-left-color: #ff4d6d;
+}  
+.valor-tarjeta.amor .icon {
+    stroke: #ff4d6d;
+}
+.valor-tarjeta.fe .outer-container {
+    border-color: #6c63ff;
+}
+.valor-tarjeta.fe .number-circle {
+    background: #6c63ff;
+}
+.valor-tarjeta.fe .valor-contenido {
+    color: #6c63ff;
+}
+.valor-tarjeta.fe .outer-container::after {
+    border-left-color: #6c63ff;
+}
+.valor-tarjeta.fe .icon {
+    stroke: #6c63ff;
+}
+.valor-tarjeta.respeto .outer-container {
+    border-color: #00c897;
+}
+.valor-tarjeta.respeto .number-circle {
+    background: #00c897;
+}
+.valor-tarjeta.respeto .valor-contenido {
+    color: #00c897;
+}
+.valor-tarjeta.respeto .outer-container::after {
+    border-left-color: #00c897;
+}
+.valor-tarjeta.respeto .icon {
+    stroke: #00c897;
+}
+.valor-tarjeta.tolerancia .outer-container {
+    border-color: #ffa500;
+}
+.valor-tarjeta.tolerancia .number-circle {
+    background: #ffa500;
+}
+.valor-tarjeta.tolerancia .valor-contenido {
+    color: #ffa500;
+}
+.valor-tarjeta.tolerancia .outer-container::after {
+    border-left-color: #ffa500;
+}
+.valor-tarjeta.tolerancia .icon {
+    stroke: #ffa500;
+}
+.valor-tarjeta.responsabilidad .outer-container {
+    border-color: #ff6f61;
+}
+.valor-tarjeta.responsabilidad .number-circle {
+    background: #ff6f61;
+}
+.valor-tarjeta.responsabilidad .valor-contenido {
+    color: #ff6f61;
+}
+.valor-tarjeta.responsabilidad .outer-container::after {
+    border-left-color: #ff6f61;
+}
+.valor-tarjeta.responsabilidad .icon {
+    stroke: #ff6f61;
+}
+.valor-tarjeta.solidaridad .outer-container {
+    border-color: #4dac76;
+}
+.valor-tarjeta.solidaridad .number-circle {
+    background: #4dac76;
+}
+.valor-tarjeta.solidaridad .valor-contenido {
+    color: #4dac76;
+}
+.valor-tarjeta.solidaridad .outer-container::after {
+    border-left-color: #4dac76;
+}
+.valor-tarjeta.solidaridad .icon {
+    stroke: #4dac76;
+}
+.valor-tarjeta.compañerismo .outer-container {
+    border-color: #1e90ff;
+}
+.valor-tarjeta.compañerismo .number-circle {
+    background: #1e90ff;
+}
+.valor-tarjeta.compañerismo .valor-contenido {
+    color: #1e90ff;
+}
+.valor-tarjeta.compañerismo .outer-container::after {
+    border-left-color: #1e90ff;
+}
+.valor-tarjeta.compañerismo .icon {
+    stroke: #1e90ff;
+}
+.valor-tarjeta.honestidad .outer-container {
+    border-color: #8e44ad;
+}
+.valor-tarjeta.honestidad .number-circle {
+    background: #8e44ad;
+}
+.valor-tarjeta.honestidad .valor-contenido {
+    color: #8e44ad;
+}
+.valor-tarjeta.honestidad .outer-container::after {
+    border-left-color: #8e44ad;
+}
+.valor-tarjeta.honestidad .icon {
+    stroke: #8e44ad;
+}
+
+
+.equipoContenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*background-color: #ffa500;*/
+    padding: 10px;
+}
+.tittleEquipo {
+    color: #4dac76;
+}
+.equipoIntegranteContenedor {
+    display: flex;
+}
+.equipoIntegrante {
+    /*background-color: #ff6f61;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    margin-right: 20px;
+}
+.equipoIntegrante:last-child {
+    margin-right: 0;
+}
+.equipoImg img {
+    width: 200px;
+}
+.equipoTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.aliadosContenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tittleAliados {
+    color: #4dac76;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----- MEDIA QUERIES ----- */
+
+/* Pantallas medianas (laptops pequeñas/tablets) */
+@media (max-width: 1024px) {
+    .valores {
+        width: 100%;
+    }
+}
+
+/* ✅ Teléfonos (menos de 768px) */
+@media (max-width: 768px) {
+    .valores {
+        width: 100%;
+    }
+    .title__valores {
+        font-size: 24px;
+        padding: 5px 0 0 0;
+    }
+    .valor-tarjeta {
+        margin: 16px 6px;
+    }
+    .outer-container {
+        width: 130px;
+        border-radius: 30px;
+        border: 6px solid #4CAF50;
+    }
+    .inner-container {
+        border-radius: 15px;
+        height: 60px;
+        padding: 35px 0px 20px;
+    }
+    .number-circle {
+        top: -30px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .outer-container::after {
+        display: none;
+    }
+    .divider {
+        margin: 0px auto;
+    }
+    .valor-contenido {
+        font-size: 12px;
+        margin: 6px 0;
+    }
+    .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scale: 0.7;
+        width: 30px;
+        height: 30px;
+        margin: auto;
+    }
+}
