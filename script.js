@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             apoyanos: "Apóyanos",
             btn__apoyanos: "APÓYANOS",
             quienesSomosTitulo: "¿Quiénes Somos?",
-            quienesSomosTexto: "Somos una organización sin ánimo de lucro comprometida con el apoyo integral para mejorar y fortalecer la calidad de vida de niños, niñas, adolescentes, jóvenes y mujeres en situación de vulnerabilidad en la ciudad de Cartagena.",
+            quienesSomosTexto: "Somos una organización sin ánimo de lucro, comprometida con el apoyo integral para mejorar y fortalecer la calidad de vida de niños, jóvenes, adolescentes, madres y adultos mayores en situación de vulnerabilidad en la ciudad de Cartagena.",
             nuestrasRedes: "Nuestras Redes",
             contactenos: "Contáctenos",
             direccion: "Dirección:",
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             apoyanos: "Support Us",
             btn__apoyanos: "SUPPORT US",
             quienesSomosTitulo: "Who We Are?",
-            quienesSomosTexto: "We are a non-profit organization committed to providing comprehensive support to improve and strengthen the quality of life of children, adolescents, young people, and women in vulnerable situations in the city of Cartagena.",
+            quienesSomosTexto: "We are a non-profit organization committed to providing comprehensive support to improve and strengthen the quality of life of children, youth, adolescents, mothers, and elderly people in vulnerable situations in the city of Cartagena.",
             nuestrasRedes: "Our Social Media",
             contactenos: "Contact Us",
             direccion: "Address:",
@@ -108,3 +108,52 @@ document.addEventListener("DOMContentLoaded", function () {
         cambiarIdioma(idiomaSeleccionado);
     });
 });
+
+
+
+
+
+
+
+
+
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.querySelector('.navegacion');
+const navLinks = document.querySelectorAll('.navegacion__link');
+
+const logo = document.querySelector('.cabecera_marca');
+const botonApoyanos = document.querySelector('.apoyanos');
+const idiomaSwitch = document.querySelector('.switch__contenedor');
+
+const adjustLayoutForMobile = () => {
+    const isMobile = window.innerWidth <= 768;
+    const isMenuOpen = nav.classList.contains('active');
+
+    if (isMobile) {
+        // En móvil: mostrar solo idioma cuando menú esté abierto
+        logo.style.display = isMenuOpen ? 'none' : 'flex';
+        idiomaSwitch.style.display = isMenuOpen ? 'flex' : 'none';
+        botonApoyanos.style.display = isMenuOpen ? 'none' : 'flex';
+    } else {
+        // En escritorio: mostrar todos
+        logo.style.display = 'flex';
+        idiomaSwitch.style.display = 'flex';
+        botonApoyanos.style.display = 'flex';
+    }
+};
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    adjustLayoutForMobile();
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        adjustLayoutForMobile();
+    });
+});
+
+window.addEventListener('resize', adjustLayoutForMobile);
+window.addEventListener('load', adjustLayoutForMobile);
+

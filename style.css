@@ -17,6 +17,18 @@ html, body {
     overflow-x: hidden;
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 header{
     user-select: none; /* Evita la selección de texto */
     -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari) */
@@ -72,6 +84,7 @@ header{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    transition: unset;
 }
 .navegacion__lista{
     width: 100%;
@@ -112,7 +125,6 @@ header{
     top: 50%;
     transform: translateY(-50%); /* Centrado verticalmente */
     height: 34px;
-    /*background-color: brown;*/
 }
 .idioma-switch {
     width: 55px;
@@ -218,6 +230,125 @@ header{
     width: auto; /* Ocupa espacio solo cuando aparece */
     margin-left: 10px; /* Espacio suave */
 }
+
+
+
+
+
+
+
+
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menu-toggle span {
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mostrar en móviles */
+@media (max-width: 768px) {
+    .cabecera__contenedor {
+        /*background-color: violet;*/
+    }
+    .cabecera_marca{
+        background-color: rgb(216, 154, 73);
+        width: 0;
+        margin-left: 10px;
+    }
+    .cabecera_marca img {
+        display: flex;
+        align-items: center;
+        width: 50px;
+    }
+    .menu-toggle {
+        display: flex;
+        width: 28px;
+        height: 24px;
+        margin-right: 20px;
+    }/*
+    .menu-toggle span {
+        transition: all 0.3s ease;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        width: 34px;
+        transform: rotate(45deg) translate(5px , 10px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        width: 34px;
+        transform: rotate(-45deg) translate(4px , -9px);
+    }*/
+
+    .navegacion {
+    position: absolute; /* Ya no es fijo */
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--color-primario);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 10;
+    margin: 0px -5px;
+    padding: 0;
+    }
+
+    .navegacion.active {
+        transform: translateX(0);
+    }
+
+    .navegacion__lista {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    .switch__contenedor {
+        position: static;          /* Restaura a comportamiento normal */
+        right: auto;               /* Anula la posición hacia la derecha */
+        top: auto;                 /* Anula la posición hacia abajo */
+        transform: none;           /* Quita el centrado vertical */
+        display: none;             /* Como ya manejas su visibilidad desde JS */
+        margin-left: 10px;
+    }
+    .apoyanos {
+        position: absolute;
+        right: 30px; /* lo coloca en la esquina izquierda */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*main{
@@ -327,16 +458,6 @@ body{
 }
 
 
-/* Responsivo */
-/*@media (max-width: 768px) {
-    .footer__contenedor {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-*/
-
-
 
 /* ✅ Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
@@ -346,7 +467,7 @@ body{
 /* ✅ Teléfonos (menos de 768px) */
 @media (max-width: 768px) {
     .navegacion{
-        opacity: 0;
+        /*opacity: 0;*/
     }
     .name{
         opacity: 0;
@@ -367,4 +488,3 @@ body{
         justify-content: left;
     }
 }
-

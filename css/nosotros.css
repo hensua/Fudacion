@@ -376,12 +376,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-top: 40px;
+    padding: 40px;
     background-color: rgb(224, 255, 231);
-    padding: 10px;
+    
 }
 .tittleEquipo {
     color: #4dac76;
+    margin: 0px;
+    margin-bottom: 35px;
 }
 .equipoIntegranteContenedor {
     display: flex;
@@ -416,9 +419,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 40px;
 }
 .tittleAliados {
     color: #4dac76;
+}
+.aliadosimagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.aliadosimagenes img{
+    width: 200px;
 }
 
 
