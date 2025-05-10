@@ -46,7 +46,7 @@ header{
     display: flex;
     align-items: center;
     width: 160px;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 .logo {
     width: 50px;
@@ -105,7 +105,7 @@ header{
 /* Contenedor del interruptor */
 .switch__contenedor{
     position: absolute;
-    right: 240px; /* Ajusta este valor para acercarlo o alejarlo del borde */
+    right: 220px; /* Ajusta este valor para acercarlo o alejarlo del borde */
     top: 50%;
     transform: translateY(-50%); /* Centrado verticalmente */
     height: 34px;
@@ -163,7 +163,7 @@ header{
     opacity: 1; /* Activa inglés */
 }
 .apoyanos{
-    margin-right: 40px;
+    margin-right: 25px;
     /*background-color: chocolate;*/
 }
 .btn__apoyanos {
