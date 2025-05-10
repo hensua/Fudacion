@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Agregar clase "activo" solo al enlace actual si ya hubo un primer clic
                 if (localStorage.getItem("primerClick") === "true") {
-                    document.querySelector(`[data-page="${seccion}"]`)?.classList.add("activo");
+                    const enlaceActivo = document.querySelector(`[data-page="${seccion}"]`);
+                    enlaceActivo?.classList.add("activo");
+                    enlaceActivo?.parentElement.classList.add("activo");
+
                 }
             })
             .catch(error => console.error("Error al cargar la sección:", error));
@@ -30,6 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             const seccion = this.dataset.page;
 
+            // Eliminar clase "activo" de todos los enlaces y sus <li>
+            enlaces.forEach(enlace => {
+                enlace.classList.remove("activo");
+                enlace.parentElement.classList.remove("activo"); // elimina del <li>
+            });
+
+            // Marcar que ya hubo un primer clic
             if (!localStorage.getItem("primerClick")) {
                 localStorage.setItem("primerClick", "true");
             }
@@ -37,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             cargarSeccion(seccion);
         });
     });
+
 
     // Mantener el idioma al recargar la página
     const idiomaGuardado = localStorage.getItem("idioma") || "es";
@@ -108,13 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
         cambiarIdioma(idiomaSeleccionado);
     });
 });
-
-
-
-
-
-
-
 
 
 const menuToggle = document.getElementById('menu-toggle');

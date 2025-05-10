@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
-
 :root {
     --color-primario: #4dac76;
     --color-secundario: #fc5969;
@@ -17,18 +16,6 @@ html, body {
     overflow-x: hidden;
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 header{
     user-select: none; /* Evita la selección de texto */
     -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari) */
@@ -56,27 +43,24 @@ header{
     position: relative; /* Necesario para centrar la navegación */
 }
 .cabecera_marca{
-    /*background-color: rgb(216, 154, 73);*/
-
     display: flex;
     align-items: center;
-    width: 340px;
+    width: 160px;
     margin-left: 30px;
 }
 .logo {
-    width: 60px;
+    width: 50px;
     height: auto; /* Mantiene la proporción */
     object-fit: contain; /* Evita que se estire */
     cursor: pointer;
 }
 .name{
-    margin-left: 12px;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    margin-left: 8px;
     font-weight: bold;
+    letter-spacing: 0px; /* puedes ajustar este valor */
 }
 .navegacion {
-    /*background-color: rgb(255, 123, 0);*/
-
     width: 500px;
     font-size: 1.1em;
     display: flex;
@@ -95,6 +79,9 @@ header{
     padding: 0;
     /*background-color: sandybrown;*/
 }
+.navegacion__item img {
+    display: none;
+}
 .navegacion__link {
     text-decoration: none;
     color: #ffffff;
@@ -105,19 +92,16 @@ header{
     transition: background-color 0.3s ease, color 0.3s ease;
     box-sizing: border-box;
 }
-
 /* 🔴 Apagado por defecto */
 .navegacion__link.activo {
     background-color: var(--color-secundario);
     color: #ffffff !important;
 }
-
 /* 🟢 Hover solo si no está activo */
 .navegacion__link:hover:not(.activo) {
     color: var(--color-secundario);
     background-color: rgb(255, 255, 255);
 }
-
 /* Contenedor del interruptor */
 .switch__contenedor{
     position: absolute;
@@ -130,12 +114,10 @@ header{
     width: 55px;
     height: 28px;
 }
-
 /* Ocultamos el checkbox */
 #toggleIdioma {
     display: none;
 }
-
 /* Estilo del interruptor */
 .switch {
     display: flex;
@@ -150,7 +132,6 @@ header{
     position: relative;
     transition: background 0.3s ease-in-out;
 }
-
 /* Bandera (siempre presentes) */
 .switch .bandera {
     width: 24px;
@@ -161,33 +142,26 @@ header{
     border-radius: 50%;
     transition: opacity 0.3s ease-in-out;
 }
-
 /* Bandera Español (izquierda) */
 .switch .bandera-es {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/40px-Flag_of_Spain.svg.png');
     opacity: 1; /* Por defecto español activo */
 }
-
 /* Bandera Inglés (derecha) */
 .switch .bandera-en {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png');
     opacity: 0.4; /* Opacidad baja cuando no está activa */
 }
-
 /* Cambio de color y alternancia de opacidad */
 #toggleIdioma:checked + .switch {
     background: rgb(236, 236, 236); /* Color activado */
 }
-
 #toggleIdioma:checked + .switch .bandera-es {
     opacity: 0.4; /* Apaga español */
 }
-
 #toggleIdioma:checked + .switch .bandera-en {
     opacity: 1; /* Activa inglés */
 }
-
-
 .apoyanos{
     margin-right: 40px;
     /*background-color: chocolate;*/
@@ -205,7 +179,6 @@ header{
     align-items: center;
     transition: background 0.1s ease, color 0.1s ease, padding-right 0.1s ease; /* Más lento y fluido */
 }
-
 .btn__apoyanos::after {
     content: "🤍"; /* Ícono de corazón */
     font-size: 1.1em;
@@ -217,28 +190,17 @@ header{
     overflow: hidden;
     transition: opacity 0.5s ease, transform 0.5s ease, width 0.5s ease, margin-left 0.5s ease;
 }
-
 .btn__apoyanos:hover {
     background-color: #fc5969;
     color: #fff;
     padding-right: 20px; /* Expande el botón más suavemente */
 }
-
 .btn__apoyanos:hover::after {
     opacity: 1; /* Se hace visible */
     transform: scale(1); /* Tamaño normal */
     width: auto; /* Ocupa espacio solo cuando aparece */
     margin-left: 10px; /* Espacio suave */
 }
-
-
-
-
-
-
-
-
-
 /* Botón hamburguesa */
 .menu-toggle {
     display: none;
@@ -249,130 +211,18 @@ header{
     cursor: pointer;
     z-index: 20;
 }
-
 .menu-toggle span {
     height: 4px;
     background: white;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
-
-/* Mostrar en móviles */
-@media (max-width: 768px) {
-    .cabecera__contenedor {
-        /*background-color: violet;*/
-    }
-    .cabecera_marca{
-        background-color: rgb(216, 154, 73);
-        width: 0;
-        margin-left: 10px;
-    }
-    .cabecera_marca img {
-        display: flex;
-        align-items: center;
-        width: 50px;
-    }
-    .menu-toggle {
-        display: flex;
-        width: 28px;
-        height: 24px;
-        margin-right: 20px;
-    }/*
-    .menu-toggle span {
-        transition: all 0.3s ease;
-    }
-    
-    .menu-toggle.active span:nth-child(1) {
-        width: 34px;
-        transform: rotate(45deg) translate(5px , 10px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        width: 34px;
-        transform: rotate(-45deg) translate(4px , -9px);
-    }*/
-
-    .navegacion {
-    position: absolute; /* Ya no es fijo */
-    top: 70px;
-    left: 0px;
-    width: 100%;
-    background-color: var(--color-primario);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 10;
-    margin: 0px -5px;
-    padding: 0;
-    }
-
-    .navegacion.active {
-        transform: translateX(0);
-    }
-
-    .navegacion__lista {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 1.5rem 0;
-    }
-
-    .switch__contenedor {
-        position: static;          /* Restaura a comportamiento normal */
-        right: auto;               /* Anula la posición hacia la derecha */
-        top: auto;                 /* Anula la posición hacia abajo */
-        transform: none;           /* Quita el centrado vertical */
-        display: none;             /* Como ya manejas su visibilidad desde JS */
-        margin-left: 10px;
-    }
-    .apoyanos {
-        position: absolute;
-        right: 30px; /* lo coloca en la esquina izquierda */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*main{
-    text-align: center;
-    margin-top: 20px;
-    height: 500px;
-}*/
-
-/*main{
-    width: 100%;
-    height: 100vh;
-}*/
-body{
-    background-color: #ffffff;
-}
-
-
 .footer {
     background-color: #222; 
     color: white;
     text-align: center;
     padding: 60px 20px 30px; /* Se reduce el padding inferior para acomodar la nueva sección */
 }
-
 .footer__contenedor {
     display: flex;
     flex-wrap: wrap;
@@ -380,33 +230,27 @@ body{
     max-width: 1100px;
     margin: auto;
 }
-
 .footer__seccion {
     flex: 1;
     min-width: 250px;
     margin: 10px;
 }
-
 .footer__seccion h3 {
     color: var(--color-primario);
     font-size: 31px;
     margin-bottom: 15px;
     text-align: left;
 }
-
 .footer__titulo--centro {
     text-align: center !important;
 }
-
 .footer__seccion p {
     text-align: left;
     font-size: 14px;
 }
-
 .footer__seccion strong{
     font-size: 15px;
 }
-
 /* Estilo de los íconos de redes */
 .footer__redes {
     display: flex;
@@ -414,7 +258,6 @@ body{
     gap: 10px;
     margin-top: 10px;
 }
-
 .footer__icon {
     width: 40px;
     height: 40px;
@@ -428,12 +271,10 @@ body{
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease;
 }
-
 .footer__icon:hover {
     background-color: var(--color-secundario); /* Cambia el fondo en hover */
     color: white;
 }
-
 .link__contacto{
     color: white;
     text-decoration: none;
@@ -441,7 +282,6 @@ body{
 .link__contacto:hover{
     color: var(--color-secundario);
 }
-
 /* Línea separadora */
 .footer__linea {
     width: 100%;
@@ -449,7 +289,6 @@ body{
     background-color: #4CAF50; /* Verde */
     margin: 20px 0;
 }
-
 /* Derechos de autor */
 .footer__derechos {
     font-size: 14px;
@@ -457,34 +296,113 @@ body{
     padding-top: 10px;
 }
 
-
-
-/* ✅ Tablets (768px - 1024px) */
-@media (max-width: 1024px) {
-    
-}
-
 /* ✅ Teléfonos (menos de 768px) */
 @media (max-width: 768px) {
-    .navegacion{
-        /*opacity: 0;*/
+    .cabecera_marca{
+        width: 0;
+        margin-left: 10px;
     }
-    .name{
-        opacity: 0;
+    .cabecera_marca img {
+        display: flex;
+        align-items: center;
+        width: 50px;
     }
     .logo{
         width:60px;
+    }
+    .name{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+    .navegacion {
+        position: absolute; 
+        top: 70px;
+        left: 0px;
+        width: 100%;
+        background-color: var(--color-primario);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 10;
+        margin: -5px;
+        padding: 0;
+        }
+        .navegacion.active {
+            transform: translateX(0);
+        }
+        .navegacion__lista {
+            display: flex;
+            flex-direction: column; 
+            align-items: initial;
+            gap: 0.2rem;
+            padding: 0;
+        }
+    .navegacion__item {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+    }
+    .navegacion__item img {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: -4px;
+    }
+    .navegacion__item.activo {
+        position: relative;
+        padding-left: 0; /* espacio para el punto */
+    }
+    .navegacion__item.activo::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 22px;
+        background-color: #ffffff; 
+    }
+    /* 🔴 Apagado por defecto */
+    .navegacion__link.activo {
+        background-color: transparent;
+        color: white !important;
+    }
+    /* 🟢 Hover solo si no está activo */
+    .navegacion__link:hover:not(.activo) {
+        color: white;
+        background-color: transparent;
+    }
+    .switch__contenedor {
+        position: static;          /* Restaura a comportamiento normal */
+        right: auto;               /* Anula la posición hacia la derecha */
+        top: auto;                 /* Anula la posición hacia abajo */
+        transform: none;           /* Quita el centrado vertical */
+        display: none;             /* Como ya manejas su visibilidad desde JS */
+        margin-left: 10px;
+    }
+    .apoyanos {
+        position: absolute;
+        right: 30px; 
     }
     .btn__apoyanos{
         font-size: 1em;
         font-weight: bold;
         padding: 12px 15px;
     }
-
+    .menu-toggle {
+        display: flex;
+        width: 28px;
+        height: 24px;
+        margin-right: 20px;
+    }
     .footer__titulo--centro {
         text-align: left !important;
     }
     .footer__redes {
         justify-content: left;
     }
+}
+
+/* ✅ Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    
 }
